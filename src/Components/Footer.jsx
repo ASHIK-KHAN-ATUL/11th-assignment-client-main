@@ -12,7 +12,7 @@ const Footer = () => {
                     <h2 className='font-bold'>LibroHub</h2>
                 </div>
                 <div className=' grid 
-             grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 justify-items-center'>
+             grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5 justify-items-center text-sm md:text-base'>
                     <nav className='flex flex-col '>
                         <h6 className="footer-title">Service</h6>
                         <a className="link link-hover">All Book</a>
@@ -56,7 +56,7 @@ const Footer = () => {
                     </nav>
                 </div>
             </footer>
-            <p className='text-center pb-7'>Copyright © {new Date().getFullYear()} - All right reserved by LibroHub</p>
+            <p className='text-center pb-7 mx-5'>Copyright © {new Date().getFullYear()} - All right reserved by LibroHub</p>
         </div>
     );
 };

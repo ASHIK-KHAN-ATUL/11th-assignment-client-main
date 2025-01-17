@@ -3,6 +3,8 @@ import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import { data } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Lottie from 'lottie-react';
+import Nodata from '../assets/lottie/Nodata.json'
 
 const BorrowedBooks = () => {
 
@@ -18,8 +20,10 @@ const BorrowedBooks = () => {
         })
     },[user.email])
 
-    if (borrowedBooks.length === 0) {
-        return <div className="text-center py-16">No books borrowed yet!</div>;
+    if (borrowedBooks.length < 1 ) {
+        return <div className='py-32 flex justify-center'>
+            <Lottie className='w-56' animationData={Nodata}></Lottie>
+        </div>;
     }
 
     // console.log(user.email)
@@ -89,7 +93,7 @@ const BorrowedBooks = () => {
                             <p>Return Date : {borrowedBook.returnDate}</p>
                         </div>
                         <div className='flex justify-center mt-4'>
-                            <button onClick={() => handleReturn(borrowedBook._id, borrowedBook.bookId )} className='btn border-none bg-[#90caf9] hover:bg-green-500 hover:border-none scale-95 duration-300 hover:scale-90 sm:text-base hover:text-white shadow-md'>Reurn Book</button>
+                            <button onClick={() => handleReturn(borrowedBook._id, borrowedBook.bookId )} className='btn border-none bg-green-400 hover:bg-[#90caf9] hover:border-none scale-95 duration-300 hover:scale-90 sm:text-base hover:text-white shadow-md'>Reurn Book</button>
                         </div>
                    </div>
                 </div>)

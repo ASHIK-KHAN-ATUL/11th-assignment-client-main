@@ -75,7 +75,7 @@ const AddBook = () => {
                         <div>
                             <p>Book Category</p>
                             <select name="category" id="" className=" border-2 p-3 rounded-lg input-bordered w-full  cursor-pointer bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" defaultValue='Select Book Category' required >
-                                <option required disabled value="">Select Book Category</option>
+                                <option  disabled value="">Select Book Category</option>
                                 <option value="Novel">Novel</option>
                                 <option value="Thriller">Thriller</option>
                                 <option value="History">History</option>

@@ -98,7 +98,13 @@ const DetailsBook = () => {
                    <div className='flex flex-row justify-center items-center w-[60%] sm:w-full mx-auto gap-5 '>
                     <button type='submit' className="btn w-[80%] mx-auto  py-3 px-5 bg-[#99e2b4]  hover:bg-[#48cae4]  rounded-xl border-none hover:text-white duration-300 hover:shadow-md hover:shadow-lime-50 sm:text-base">Confirm Borrow</button>
 
-                    <button onClick={() => document.getElementById('my_modal_5').close()} className="btn w-[80%] mx-auto  py-3 px-5 bg-red-500  hover:bg-red-600  rounded-xl border-none hover:text-white duration-300 hover:shadow-md hover:shadow-lime-50 sm:text-base">Cancel</button>
+                    <button 
+                    onClick={(e) => {
+                        e.target.form.reset();
+                        document.getElementById('my_modal_5').close();
+                         
+                        } }
+                     className="btn w-[80%] mx-auto  py-3 px-5 bg-red-500  hover:bg-red-600  rounded-xl border-none hover:text-white duration-300 hover:shadow-md hover:shadow-lime-50 sm:text-base">Cancel</button>
                    </div>
                 </form>
                 </div>

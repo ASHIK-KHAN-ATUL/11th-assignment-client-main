@@ -11,7 +11,7 @@ const Banner = () => {
 
     return (
 
-        <div className="carousel mx-auto lg:w-[70%] md:h-96 lg:h-[420px] 2xl:h-[600px] rounded-lg my-10 border-4 border-[#2196f3] drop-shadow-[0_4px_15px_rgba(56,189,248,0.5)] ">
+        <div className="carousel mx-auto  lg:w-[70%] md:h-96 lg:h-[420px] 2xl:h-[600px] rounded-lg my-10 border-4 border-[#2196f3] drop-shadow-[0_4px_15px_rgba(56,189,248,0.5)] ">
             <div id="slide1" className="carousel-item relative w-full">
                 <img
                 src={boook1}
