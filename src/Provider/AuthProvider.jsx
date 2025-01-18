@@ -41,13 +41,13 @@ const AuthProvider = ({children}) => {
 
             if(currentUser?.email){
                 const user = { email : currentUser.email}
-                axios.post('http://localhost:3000/jwt', user, {withCredentials: true})
+                axios.post('https://11th-assignment-server-delta.vercel.app/jwt', user, {withCredentials: true})
                 .then(res => {
                     console.log("Login Token",res.data);
                     setLoading(false);
                 })
             }else{
-                axios.post('http://localhost:3000/logout', {}, {withCredentials: true})
+                axios.post('https://11th-assignment-server-delta.vercel.app/logout', {}, {withCredentials: true})
                 .then(res => {
                     console.log("Logout", res.data);
                     setLoading(false);

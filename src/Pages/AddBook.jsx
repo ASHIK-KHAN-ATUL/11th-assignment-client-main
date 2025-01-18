@@ -26,7 +26,7 @@ const AddBook = () => {
         const newBook ={ name, image, category, quantity, rating, author, description, bookContent, bookAdderName, bookAdderEmail}
         console.log(newBook)
 
-        fetch('http://localhost:3000/books' ,{
+        fetch('https://11th-assignment-server-delta.vercel.app/books' ,{
             method: "POST",
             headers: {
                 "content-type": "application/json"

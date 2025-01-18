@@ -28,7 +28,7 @@ const UpdateBook = () => {
         const updatedBook ={ name, image, category, quantity, rating, author, description, bookContent, bookAdderName, bookAdderEmail}
         // console.log(updatedBook)
 
-        fetch(`http://localhost:3000/books/${book._id}`, {
+        fetch(`https://11th-assignment-server-delta.vercel.app/books/${book._id}`, {
             method:"PUT",
             headers:{
                 "content-type":"application/json"

@@ -13,11 +13,11 @@ const CategoryBooks = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:3000/books?category=${name}`)
+        fetch(`https://11th-assignment-server-delta.vercel.app/books?category=${name}`)
         .then(res=> res.json())
         .then(data => setBooks(data) )
 
-        // axios.get(`http://localhost:3000/books?category=${name}`, {withCredentials: true})
+        // axios.get(`https://11th-assignment-server-delta.vercel.app/books?category=${name}`, {withCredentials: true})
         // .then(res => {
         //     setBooks(res.data)
         // })

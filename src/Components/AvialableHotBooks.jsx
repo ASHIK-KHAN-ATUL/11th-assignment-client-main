@@ -10,7 +10,7 @@ const AvialableHotBooks = () => {
     // console.log(hotBooks)
 
     useEffect( () =>{
-        fetch('http://localhost:3000/books/latest')
+        fetch('https://11th-assignment-server-delta.vercel.app/books/latest')
         .then(res => res.json())
         .then(data => {
             setHotBooks(data)

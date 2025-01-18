@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://11th-assignment-server-delta.vercel.app',
     withCredentials: true
 })
 
@@ -24,7 +24,7 @@ const UseAxios = () => {
                 .then(()=>{
                     console.log('Logges out user')
                 })
-                .catch( error => console.log(error));
+                .catch( error => ('logged out user', error))
             }
 
             return Promise.reject(error);

@@ -26,7 +26,7 @@ const Router = createBrowserRouter([
         {
           path:'/all-book',
           element:<PrivetRoute><ToggleForAllBooks></ToggleForAllBooks></PrivetRoute>,
-          loader: () => fetch('http://localhost:3000/books')
+          loader: () => fetch('https://11th-assignment-server-delta.vercel.app/books')
         },
         {
           path:'/add-book',
@@ -39,17 +39,17 @@ const Router = createBrowserRouter([
         {
           path:'/updatebook/:id',
           element:<UpdateBook></UpdateBook>,
-          loader: ({params}) => fetch(`http://localhost:3000/books/${params.id}`)
+          loader: ({params}) => fetch(`https://11th-assignment-server-delta.vercel.app/books/${params.id}`)
         },
         {
           path:'/details/:id',
           element:<PrivetRoute><DetailsBook></DetailsBook></PrivetRoute>,
-          loader: ({params}) => fetch(`http://localhost:3000/books/${params.id}`)
+          loader: ({params}) => fetch(`https://11th-assignment-server-delta.vercel.app/books/${params.id}`)
         },
         {
           path:'/category/:name',
           element:<PrivetRoute><CategoryBooks></CategoryBooks></PrivetRoute>,
-          loader: ({params}) => fetch(`http://localhost:3000/books?category=${params.name}`)
+          loader: ({params}) => fetch(`https://11th-assignment-server-delta.vercel.app/books?category=${params.name}`)
         },
         {
           path:'/register',
