@@ -5,6 +5,7 @@ import { data } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Lottie from 'lottie-react';
 import Nodata from '../assets/lottie/Nodata.json'
+import axios from 'axios';
 
 const BorrowedBooks = () => {
 
@@ -12,12 +13,21 @@ const BorrowedBooks = () => {
     const{user}= useContext(AuthContext);
 
     useEffect(()=> {
-        fetch(`http://localhost:3000/bookBorrowed?email=${user.email}`)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            setBorrowedBooks(data)
+
+
+        // fetch(`http://localhost:3000/bookBorrowed?email=${user.email}`)
+        // .then(res => res.json())
+        // .then(data => {
+        //     console.log(data)
+        //     setBorrowedBooks(data)
+        // })
+
+        axios.get(`http://localhost:3000/bookBorrowed?email=${user.email}`, {withCredentials: true})
+        .then(res => {
+            // console.log(res.data)
+            setBorrowedBooks(res.data)
         })
+
     },[user.email])
 
     if (borrowedBooks.length < 1 ) {

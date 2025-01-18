@@ -1,6 +1,8 @@
 import React from 'react';
 import Banner from '../Components/Banner';
 import BookCategories from '../Components/BookCategories';
+import BorrowingTipsFAQ from '../Components/BorrowingTipsFAQ ';
+import AvialableHotBooks from '../Components/AvialableHotBooks';
 
 
 const Home = () => {
@@ -10,6 +12,10 @@ const Home = () => {
                 <Banner></Banner>
             </div>
             <BookCategories></BookCategories>
+            <BorrowingTipsFAQ></BorrowingTipsFAQ>
+            <div className='w-[40%] mx-auto'>
+                <AvialableHotBooks></AvialableHotBooks>
+            </div>
         </div>
     );
 };

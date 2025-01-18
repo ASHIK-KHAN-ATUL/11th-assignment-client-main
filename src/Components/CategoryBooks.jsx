@@ -3,6 +3,7 @@ import { IoMdStarOutline } from 'react-icons/io';
 import { Link, useParams } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import ReactStars from "react-rating-stars-component";
+import axios from 'axios';
 
 const CategoryBooks = () => {
 
@@ -11,9 +12,16 @@ const CategoryBooks = () => {
     const {user} = useContext(AuthContext);
 
     useEffect(() => {
+
         fetch(`http://localhost:3000/books?category=${name}`)
         .then(res=> res.json())
         .then(data => setBooks(data) )
+
+        // axios.get(`http://localhost:3000/books?category=${name}`, {withCredentials: true})
+        // .then(res => {
+        //     setBooks(res.data)
+        // })
+
    } ,[name])
 
 //    console.log(name)
