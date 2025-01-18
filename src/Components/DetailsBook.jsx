@@ -91,7 +91,7 @@ const DetailsBook = () => {
                             <label>Email <input name='email' type="email" defaultValue={user.email} placeholder="Type here" className="input input-bordered w-full max-w-xs" required /></label>
                         </div>
                         <div>
-                            <label>Email <input name='returnDate' type="date"  placeholder="Type here" className="input input-bordered w-full max-w-xs" required /></label>
+                            <label>Set Return Date<input name='returnDate' type="date"  placeholder="Type here" className="input input-bordered w-full max-w-xs" required /></label>
                         </div>
                     </section>
 
