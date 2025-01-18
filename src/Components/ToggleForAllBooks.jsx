@@ -5,7 +5,7 @@ import AllBookTable from '../Pages/AllBookTable';
 const ToggleForAllBooks = () => {
 
     const [viewMode,  setViewMode] = useState("card")
-    console.log(viewMode)
+    // console.log(viewMode)
 
     return (
         <div className='py-10'>

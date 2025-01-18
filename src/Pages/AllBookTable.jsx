@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const AllBookTable = () => {
   const books = useLoaderData();
-  console.log(books);
+  // console.log(books);
 
   const {user} = useContext(AuthContext);
 

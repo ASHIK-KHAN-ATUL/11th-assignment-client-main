@@ -6,14 +6,16 @@ import { toast } from 'react-toastify';
 import Lottie from 'lottie-react';
 import Nodata from '../assets/lottie/Nodata.json'
 import axios from 'axios';
+import UseAxios from '../Components/Hooks/UseAxios';
 
 const BorrowedBooks = () => {
 
     const [borrowedBooks, setBorrowedBooks] = useState([]);
     const{user}= useContext(AuthContext);
 
-    useEffect(()=> {
+    const axiosSecure = UseAxios();
 
+    useEffect(()=> {
 
         // fetch(`http://localhost:3000/bookBorrowed?email=${user.email}`)
         // .then(res => res.json())
@@ -22,9 +24,14 @@ const BorrowedBooks = () => {
         //     setBorrowedBooks(data)
         // })
 
-        axios.get(`http://localhost:3000/bookBorrowed?email=${user.email}`, {withCredentials: true})
+        // axios.get(`http://localhost:3000/bookBorrowed?email=${user.email}`, {withCredentials: true})
+        // .then(res => {
+        //     // console.log(res.data)
+        //     setBorrowedBooks(res.data)
+        // })
+
+        axiosSecure.get(`/bookBorrowed?email=${user.email}`)
         .then(res => {
-            // console.log(res.data)
             setBorrowedBooks(res.data)
         })
 
