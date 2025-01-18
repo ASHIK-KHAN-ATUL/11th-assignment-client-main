@@ -34,7 +34,7 @@ const BorrowingTipsFAQ = () => {
   ];
 
   return (
-    <div className="p-8  rounded-lg max-w-3xl mx-auto py-8">
+    <div className="p-8  rounded-lg md:max-w-3xl mx-auto py-8">
       <h2 className="text-2xl font-semibold text-center mb-6">Borrowing Tips & FAQ</h2>
 
 
@@ -42,12 +42,10 @@ const BorrowingTipsFAQ = () => {
         <h3 className="text-xl font-medium mb-4">Borrowing Tips</h3>
         <ul className="list-disc pl-6 space-y-2">
           {tips.map((tip, index) => (
-            <li key={index} className="text-black">{tip}</li>
+            <li key={index} className="text-black md:text-xl">{tip}</li>
           ))}
         </ul>
       </div>
-
-
 
       <div className="">
         <h3 className="text-xl font-medium mb-4">Frequently Asked Questions</h3>
@@ -64,6 +62,7 @@ const BorrowingTipsFAQ = () => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };

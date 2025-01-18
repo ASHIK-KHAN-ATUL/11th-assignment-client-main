@@ -18,10 +18,10 @@ const BookCategories = () => {
     // ${isHover === idx ? 'hidden': 'inline-block'}
 
     return (
-       <div className='p-20 '>
-            <div className='border-4 p-4 border-white hover:border-[#99e2b4] duration-500 hover:rounded-2xl hover:scale-y-110'>
+       <div className='py-20 '>
+            <div className='border-4 p-4 w-[90%] lg:w-[75%] mx-auto border-white hover:border-[#99e2b4] duration-500 hover:rounded-2xl md:hover:scale-y-110'>
                 <h1 className='py-5 font-bold md:text-2xl '>Book By Category !!</h1>
-                <div className=' grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 '>
+                <div className=' grid grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 '>
                     {categories.map( (category, idx)=> (
                         <div key={idx} className='w-full  flex justify-center'>
                             <Link onMouseEnter={() => setIsHover(idx)} onMouseLeave={() => setIsHover(null)} to={`/category/${category.name}`} className=' w-[50%]  border-2 border-[#88d4ab] hover:border-[#90caf9] overflow-hidden flex flex-row h-14 relative rounded-xl hover:w-[45%] duration-500' >
