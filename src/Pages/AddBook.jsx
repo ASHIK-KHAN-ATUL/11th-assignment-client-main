@@ -52,7 +52,7 @@ const AddBook = () => {
 
     return (
        <div className='py-20'>
-            <div className='bg-[#bbdefb] bg-opacity-40 m-10 border-2 border-[#abc4ff] rounded-2xl  drop-shadow-[0_4px_6px_rgba(59,130,246,0.5)]  duration-300 hover:border-[#95d5b2] font-semibold'>
+            <div className='bg-[#abc4ff]/40 m-10 border-2 border-[#abc4ff] rounded-2xl  drop-shadow-[0_4px_6px_rgba(59,130,246,0.5)]  duration-300 font-semibold'>
 
                 <h2 className='text-center text-xl md:text-2xl xl:text-4xl font-bold my-5 border-b-2 border-[#e3f2fd] w-[50%] mx-auto  '>Book Information</h2>
 
@@ -62,19 +62,19 @@ const AddBook = () => {
                         {/* Book Name */}
                         <div>
                             <p>Book Name</p>
-                            <input type="text" name='name' placeholder="Enter Book Name" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='name' placeholder="Enter Book Name" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                         {/* Book Image */}
                         <div>
                             <p>Book Image link</p>
-                            <input type="text" name='image' placeholder="Enter Book Image Link" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='image' placeholder="Enter Book Image Link" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                         {/* Book Category */}
                         <div>
                             <p>Book Category</p>
-                            <select name="category" id="" className=" border-2 p-3 rounded-lg input-bordered w-full  cursor-pointer bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" defaultValue='Select Book Category' required >
+                            <select name="category" id="" className=" border-2 p-3 rounded-lg input-bordered w-full  cursor-pointer bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" defaultValue='Select Book Category' required >
                                 <option  disabled value="">Select Book Category</option>
                                 <option value="Novel">Novel</option>
                                 <option value="Thriller">Thriller</option>
@@ -87,31 +87,31 @@ const AddBook = () => {
                         {/* Author Name */}
                         <div>
                             <p>Author Name</p>
-                            <input type="text" name='author-name' placeholder="Enter Author Name" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='author-name' placeholder="Enter Author Name" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                         {/* Quantity */}
                         <div>
                             <p>Book Quantity</p>
-                            <input type="number" name='quantity' placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" min={1} required />
+                            <input type="number" name='quantity' placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" min={1} required />
                         </div>
 
                         {/* Rating */}
                         <div>
                             <p>Book Rating</p>
-                            <input type="number" name='rating' placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" min={1} max={5} required />
+                            <input type="number" name='rating' placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" min={1} max={5} required />
                         </div>
 
                         {/*  Short Description */}
                         <div>
                             <p>Short Description</p>
-                            <input type="text" name='description' placeholder="Enter Short Description" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='description' placeholder="Enter Short Description" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                         {/*  Book Content  */}
                         <div>
                             <p>Book Content </p>
-                            <input type="text" name='book-content' placeholder="Enter Book Content" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='book-content' placeholder="Enter Book Content" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                 </div>

@@ -8,10 +8,10 @@ const ToggleForAllBooks = () => {
     // console.log(viewMode)
 
     return (
-        <div className='py-10'>
-            <div className='w-[75%] sm:w-1/2 lg:w-1/3 mx-auto flex justify-center font-semibold text-sm md:text-xl bg-[#d8f3dc] rounded-[40px] py-5 '>
+        <div className='pt-10'>
+            <div className='w-[75%] sm:w-1/2 lg:w-1/3 mx-auto flex justify-center font-semibold md:text-lg  rounded-lg py-2 border-2 border-dashed border-[#abc4ff]'>
                 <label className='flex items-center' >Select View : </label>
-                <select className='bg-[#ff758f] rounded-xl ml-2  p-2' name="" id="" value={viewMode} onChange={(e) => setViewMode(e.target.value)}>
+                <select className='border-2 border-dotted border-[#abc4ff] rounded-md ml-2  p-2' name="" id="" value={viewMode} onChange={(e) => setViewMode(e.target.value)}>
                     <option value="card">Card View</option>
                     <option value="table">Table View</option>
                 </select>

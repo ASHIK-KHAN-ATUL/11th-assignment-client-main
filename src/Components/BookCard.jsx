@@ -3,6 +3,7 @@ import { IoMdStarOutline } from 'react-icons/io';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
 import ReactStars from "react-rating-stars-component";
+import { toast } from 'react-toastify';
 
 const BookCard = ({book}) => {
 
@@ -11,22 +12,29 @@ const BookCard = ({book}) => {
     // console.log(book)
 
     return (
-        <div className=" bg-[#bbdefb] bg-opacity-80 border-2 border-[#64b5f6] 
-         w-[90%] sm:w-[400px] md:w-[90%]   rounded-xl">
-            <div className="flex-col shrink-0">
-                <img src={book.image} className="w-[300px] rounded-lg shadow-2xl scale-75 mx-auto pt-5" />
-                <div className='px-4 flex flex-col gap-2 text-xl font-semibold '>
-                    <h1 className=" font-bold ">Book Name: {book.name}</h1>
-                    <p className="">Author Name : {book.author}</p>
-                    <p className="">Category : {book.category}</p>                  
-                    <p className="">Quantity : {book.quantity}</p>                  
-                     <p className="flex  items-center text-sm sm:text-2xl">Rating :  <ReactStars count={5} value={book.rating} size={30}></ReactStars> </p>              
+        <div key={book._id} className=" bg-white/40 drop-shadow-sm border rounded-md px-5 w-64 flex flex-col justify-evenly pb-2">
+
+                <img src={book.image} className="w-[200px] h-[300px] object-cover  shadow-2xl mx-auto pt-3 " />
+                <div className=' flex flex-col  my-3 '>
+                    <h1 className=" font-bold ">{book.name}</h1>
+                    <p className="">{book.author}</p>
+                    <p className="">{book.category}</p>                  
+                    <p className="">{book.quantity}</p>                  
+                    <div className="flex  items-center text-sm sm:text-2xl"><ReactStars count={5} value={Number(book.rating)} size={30} edit={false} ></ReactStars> </div>              
                 </div>
-                <div className='my-3 flex justify-center'>
-                    <Link to={`/updatebook/${book._id}`} className="btn btn-accent hover:bg-sky-400 hover:border-none scale-110 duration-300 hover:scale-125  hover:text-white" disabled={book.bookAdderEmail !== user.email}>Update Book</Link>
-                </div>
+
+                <Link to={book.bookAdderEmail === user.email ? `/updatebook/${book._id}` : '#'}
+                    onClick={() => {
+                        if(book.bookAdderEmail !== user.email){
+                            toast.error("You can only update books you added.");
+                        }
+                    }}
+                    className={`btn btn-outline btn-success duration-300 w-full scale-90 ${
+                        book.bookAdderEmail !== user.email ? 'btn btn-outline btn-error cursor-not-allowed' : 'hover:bg-sky-400 hover:text-white'
+                      }`} >Update Book
+                </Link>
+
             </div>
-        </div>
     );
 };
 

@@ -42,7 +42,7 @@ const BorrowingTipsFAQ = () => {
         <h3 className="text-xl font-medium mb-4">Borrowing Tips</h3>
         <ul className="list-disc pl-6 space-y-2">
           {tips.map((tip, index) => (
-            <li key={index} className="text-black md:text-xl">{tip}</li>
+            <li key={index} className="text-gray-500 md:text-xl">{tip}</li>
           ))}
         </ul>
       </div>
