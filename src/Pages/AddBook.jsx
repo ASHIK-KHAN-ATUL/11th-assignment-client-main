@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,6 +7,7 @@ const AddBook = () => {
 
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
+    const [isHover, setIsHover] = useState(null)
 
     const handleAddBook = e => {
         e.preventDefault();
@@ -52,13 +53,14 @@ const AddBook = () => {
 
     return (
        <div className='py-20'>
-            <div className='bg-[#abc4ff]/40 m-10 border-2 border-[#abc4ff] rounded-2xl  drop-shadow-[0_4px_6px_rgba(59,130,246,0.5)]  duration-300 font-semibold'>
 
-                <h2 className='text-center text-xl md:text-2xl xl:text-4xl font-bold my-5 border-b-2 border-[#e3f2fd] w-[50%] mx-auto  '>Book Information</h2>
+            <div className='bg-[#abc4ff]/40 m-10 border-2 border-[#abc4ff] rounded-2xl   duration-300 font-semibold'>
+
+                <h2 className='text-center text-xl md:text-2xl xl:text-4xl font-bold my-5 border-b-2 border-[#e3f2fd] w-[50%] mx-auto  '>Add Book Information</h2>
 
                 <form onSubmit={handleAddBook} className='flex flex-col justify-center px-10'>
                 
-                <div className='grid md:grid-cols-2 gap-5 justify-center' >
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-5 justify-center' >
                         {/* Book Name */}
                         <div>
                             <p>Book Name</p>
@@ -118,8 +120,9 @@ const AddBook = () => {
 
                 {/* submit */}
                 <div className='my-5 flex justify-center'>
-                        <button  className='px-10 btn btn-accent hover:bg-sky-400 hover:border-none scale-110 duration-300 hover:scale-125  hover:text-white'>Submit</button>
+                    <button  className='btn  btn-success w-[55%] hover:scale-x-110 rounded-xl  hover:text-white duration-300 hover:shadow-md'>Submit </button>
                 </div>
+
 
                 </form>
 

@@ -50,8 +50,8 @@ const UpdateBook = () => {
     }
 
     return (
-        <section className='px-10 py-20'>
-            <div className='bg-[#bbdefb] p-10 border-2 border-[#abc4ff] rounded-2xl  drop-shadow-[0_4px_6px_rgba(59,130,246,0.5)] hover:drop-shadow-[0_4px_6px_rgba(34,197,94,0.5)] duration-300 hover:border-[#95d5b2] font-semibold'>
+        <section className='py-20'>
+            <div className='bg-[#abc4ff]/40 m-10 border-2 border-[#abc4ff] rounded-2xl   duration-300 font-semibold px-10'>
 
             <h2 className='text-center text-xl md:text-2xl xl:text-4xl font-bold my-5 border-b-2 border-[#e3f2fd] w-[50%] mx-auto  '>Update Book Information</h2>
 
@@ -61,19 +61,19 @@ const UpdateBook = () => {
                     {/* Book Name */}
                     <div className='w-full'>
                         <p>Book Name</p>
-                        <input type="text" name='name' defaultValue={book.name} placeholder="Enter Book Name" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='name' defaultValue={book.name} placeholder="Enter Book Name" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
                     {/* Book Image */}
                     <div>
                         <p>Book Image link</p> 
-                        <input type="text" name='image' defaultValue={book.image} placeholder="Enter Book Image Link" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='image' defaultValue={book.image} placeholder="Enter Book Image Link" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
                     {/* Book Category */}
                     <div>
                         <p>Book Category</p>
-                        <select name="category" defaultValue={book.category} id="" className=" border-2 p-3 rounded-lg input-bordered w-full  cursor-pointer bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300"  required >
+                        <select name="category" defaultValue={book.category} id="" className=" border-2 p-3 rounded-lg input-bordered w-full  cursor-pointer bg-[#abc4ff] hover:bg-[#ffedd8] duration-300"  required >
                             <option required disabled value="">Select Book Category</option>
                             <option value="Novel">Novel</option>
                             <option value="Thriller">Thriller</option>
@@ -86,38 +86,38 @@ const UpdateBook = () => {
                     {/* Author Name */}
                     <div>
                         <p>Author Name</p>
-                        <input type="text" name='author-name' defaultValue={book.author} placeholder="Enter Author Name" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='author-name' defaultValue={book.author} placeholder="Enter Author Name" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
                     {/* Quantity */}
                     <div>
                         <p>Book Quantity</p>
-                        <input type="number" name='quantity' defaultValue={book.quantity} placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300"  required />
+                        <input type="number" name='quantity' defaultValue={book.quantity} placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300"  required />
                     </div>
 
                     {/* Rating */}
                     <div>
                         <p>Book Rating</p>
-                        <input type="number" name='rating' defaultValue={book.rating} placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" min={1} max={5} required />
+                        <input type="number" name='rating' defaultValue={book.rating} placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" min={1} max={5} required />
                     </div>
 
                     {/*  Short Description */}
                     <div>
                         <p>Short Description</p>
-                        <input type="text" name='description' defaultValue={book.description} placeholder="Enter Short Description" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='description' defaultValue={book.description} placeholder="Enter Short Description" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
                     {/*  Book Content  */}
                     <div>
                         <p>Book Content </p>
-                        <input type="text" name='book-content' defaultValue={book.bookContent} placeholder="Enter Book Content" className="input input-bordered w-full  bg-[#b7e4c7] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='book-content' defaultValue={book.bookContent} placeholder="Enter Book Content" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
             </div>
 
                 {/* submit */}
-                <div className='mt-5 flex justify-center'>
-                    <button  className='btn py-3 px-5 bg-[#99e2b4] w-40 hover:bg-[#88d4ab] hover:scale-110 rounded-xl border-none hover:text-white duration-300 hover:shadow-md hover:shadow-lime-50 text-base'>Submit </button>
+                <div className='my-5 flex justify-center'>
+                    <button  className='btn  btn-success w-[55%] hover:scale-x-110 rounded-xl  hover:text-white duration-300 hover:shadow-md'>Submit </button>
                 </div>
 
             </form>
