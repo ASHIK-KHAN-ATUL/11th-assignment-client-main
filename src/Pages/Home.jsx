@@ -4,6 +4,7 @@ import BorrowingTipsFAQ from '../Components/BorrowingTipsFAQ ';
 import AvialableHotBooks from '../Components/AvialableHotBooks';
 import Banners from '../Components/Banners';
 import WhyChoseUs from '../Components/WhyChoseUs';
+import Contact from '../Components/Contact';
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
                 <AvialableHotBooks></AvialableHotBooks>
             </div>
             <WhyChoseUs></WhyChoseUs>
+            <Contact></Contact>
         </div>
     );
 };

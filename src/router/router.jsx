@@ -12,6 +12,7 @@ import DetailsBook from "../Components/DetailsBook";
 import BorrowedBooks from "../Pages/BorrowedBooks";
 import ErrorPage from "../Pages/ErrorPage";
 import ToggleForAllBooks from "../Components/ToggleForAllBooks";
+import Contact from "../Components/Contact";
 
 
 const Router = createBrowserRouter([
@@ -60,9 +61,14 @@ const Router = createBrowserRouter([
           element:<Login></Login>
         },
         {
+          path: '/contact',
+          element: <Contact></Contact>
+        },
+        {
           path:'*',
           element:<ErrorPage></ErrorPage>
         }
+
       ]
     },
   ]);

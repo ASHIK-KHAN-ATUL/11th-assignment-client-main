@@ -34,7 +34,7 @@ const BorrowingTipsFAQ = () => {
   ];
 
   return (
-    <div className="pt-20  rounded-lg md:max-w-3xl mx-auto ">
+    <div className="pt-20 w-[90%] rounded-lg md:max-w-3xl mx-auto ">
       <h2 className="text-2xl font-semibold text-center mb-6">Borrowing Tips & FAQ</h2>
 
 
