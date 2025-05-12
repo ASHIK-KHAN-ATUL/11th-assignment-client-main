@@ -15,7 +15,7 @@ const BookCategories = () => {
     console.log(isHover)
 
     return (
-       <div className='py-20 '>
+       <div className='pt-20 '>
             <div className=' p-4 w-[90%] lg:w-[75%] mx-auto '>
                 <h1 className='py-5 font-bold md:text-2xl text-center mb-10'>Book By Category !!</h1>
                 <div className=' grid grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 '>

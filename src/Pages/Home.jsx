@@ -1,21 +1,23 @@
 import React from 'react';
-import Banner from '../Components/Banner';
 import BookCategories from '../Components/BookCategories';
 import BorrowingTipsFAQ from '../Components/BorrowingTipsFAQ ';
 import AvialableHotBooks from '../Components/AvialableHotBooks';
+import Banners from '../Components/Banners';
+import WhyChoseUs from '../Components/WhyChoseUs';
 
 
 const Home = () => {
     return (
         <div>
-            <div className='w-[70%] mx-auto lg:w-[55%] 2xl:w-[50%] '>
-                <Banner></Banner>
+            <div>
+                <Banners></Banners>
             </div>
             <BookCategories></BookCategories>
             <BorrowingTipsFAQ></BorrowingTipsFAQ>
-            <div className='w-[40%] mx-auto'>
+            <div className='w-[60%] mx-auto'>
                 <AvialableHotBooks></AvialableHotBooks>
             </div>
+            <WhyChoseUs></WhyChoseUs>
         </div>
     );
 };

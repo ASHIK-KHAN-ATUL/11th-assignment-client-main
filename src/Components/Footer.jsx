@@ -4,7 +4,7 @@ import Lottie from 'lottie-react';
 
 const Footer = () => {
     return (
-        <div className='bg-[#abc4ff]'>
+        <div className='bg-[#abc4ff] mt-20'>
             
             <footer className="py-10">
                 <div className='w-48 flex items-center ml-10 justify-between'>

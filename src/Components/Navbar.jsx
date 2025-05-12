@@ -52,7 +52,7 @@ const Navbar = ({ theme, setTheme }) => {
                     <div className='flex items-center gap-2 relative cursor-pointer' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
                         {/* Profile pic */}
                         <div className='flex items-center'>
-                            <div className='h-12 w-12  rounded-full border-2 border-[#00b4d8]'>
+                            <div className='h-12 w-12  rounded-full border-2 border-[#00b4d8] animate-pulse'>
                                 <img className='object-cover rounded-full' src={user.photoURL} alt="Profile Pic" />
                             </div>
                         </div>
@@ -61,11 +61,11 @@ const Navbar = ({ theme, setTheme }) => {
                         {isHover && (
                             <div className='absolute right-0 top-12 bg-[#e3f2fd] shadow-md rounded-lg w-56 md:w-80 p-3 z-10 drop-shadow-[0_4px_6px_rgba(56,189,248,0.5)]'>
                                 <div className='text-center mb-3'>
-                                    <img src={user.photoURL} className='h-16 w-16 mx-auto rounded-full border-2 border-[#023e8a]'  alt="Profile pic" />
+                                    <img src={user.photoURL} className='h-16 w-16 mx-auto rounded-full border-2 border-[#023e8a] '  alt="Profile pic " />
                                     <p className='mt-2 text-[10px] md:text-base font-medium text-start'>Name : {user.displayName}</p>
                                     <p className='mt-2 text-[10px] md:text-base font-medium text-start'>email : {user.email}</p>
                                     <p className='mt-2 text-[8px] md:text-sm font-medium text-start'>Last Sign In : {user.metadata.lastSignInTime}</p>
-                                    <Link onClick={logout} className='btn btn-error text-white mt-2 hover:scale-x-125 '>Logout</Link>
+                                    <Link onClick={logout} className='btn btn-outline w-[70%] btn-error text-white mt-2 hover:scale-x-110 '>Logout</Link>
                                 </div>
                             </div>
                         )}

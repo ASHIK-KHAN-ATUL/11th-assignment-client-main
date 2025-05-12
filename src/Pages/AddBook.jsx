@@ -120,7 +120,7 @@ const AddBook = () => {
 
                 {/* submit */}
                 <div className='my-5 flex justify-center'>
-                    <button  className='btn  btn-success w-[55%] hover:scale-x-110 rounded-xl  hover:text-white duration-300 hover:shadow-md'>Submit </button>
+                    <button  className='btn bg-green-50 btn-outline btn-success w-[50%] hover:scale-x-90 rounded-xl  hover:text-white duration-300 hover:shadow-md'>Submit </button>
                 </div>
 
 

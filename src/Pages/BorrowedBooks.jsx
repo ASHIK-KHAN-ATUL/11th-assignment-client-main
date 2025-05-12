@@ -98,12 +98,12 @@ const BorrowedBooks = () => {
         <div className='grid lg:grid-cols-2  2xl:grid-cols-3 gap-10 justify-center items-center py-16 '>
             {
                 borrowedBooks.map(borrowedBook => 
-                <div className='flex justify-center items-center  bg-gray-500 drop-shadow-sm border rounded-md p-5  sm:w-[500px] lg:scale-90 mx-auto' key={borrowedBook._id}>
+                <div className='flex justify-center items-center  bg-white/40 drop-shadow-sm border rounded-md p-5  sm:w-[500px] lg:scale-90 mx-auto' key={borrowedBook._id}>
                    <div className='sm:flex justify-between items-center sm:gap-3'>
                         <div className='flex justify-center items-center'>
                             <img className='h-40' src={borrowedBook.bookImage} alt="" />
                         </div>
-                        <div className='text-sm font-medium mt-4'>
+                        <div className='text-sm font-medium mt-4 flex flex-col gap-2'>
                             <p>Book Name : {borrowedBook.bookName}</p>
                             <p>Category : {borrowedBook.bookCategory}</p>
                             <p>Borrowed Date : {borrowedBook.borrowDate}</p>

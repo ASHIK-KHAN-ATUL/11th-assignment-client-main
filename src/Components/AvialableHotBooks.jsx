@@ -3,11 +3,18 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import  { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Pagination } from 'swiper/modules';
+
 
 const AvialableHotBooks = () => {
 
     const [hotBooks, setHotBooks] = useState([]);
-    // console.log(hotBooks)
+    console.log(hotBooks)
 
     useEffect( () =>{
         fetch('https://11th-assignment-server-delta.vercel.app/books/latest')
@@ -30,17 +37,27 @@ const AvialableHotBooks = () => {
 
 
     return (
-        <div className=" py-10  ">
-            <h2 className='font-semibold  md:font-bold text-xl md:text-3xl py-10'>Hot Books</h2>
-            <Slider {...settings} className="">
-                {
-                    hotBooks.map((hotBook, idx) => (
-                        <div key={idx} className=''>
-                            <img className='w-20 md:w-36' src={hotBook.image} alt="" />
-                        </div>
-                    ))
-                }
-            </Slider>
+        <div className=" pt-20  ">
+            <h2 className='font-semibold  md:font-bold text-xl md:text-3xl py-10 text-center'>Hot Books</h2>
+
+             <Swiper
+                    slidesPerView={3}
+                    spaceBetween={30}
+                    freeMode={true}
+                    pagination={{
+                    clickable: true,
+                    }}
+                    modules={[FreeMode, Pagination]}
+                    className="mySwiper"
+                >
+                    {
+                        hotBooks.map((book, index) => 
+                        <SwiperSlide key={index}>
+                            <img src={book.image} className='h-60 cursor-pointer' alt="" />
+                        </SwiperSlide>)
+                    }
+            </Swiper>
+
         </div>
     );
 };
