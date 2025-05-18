@@ -25,7 +25,7 @@ const AddBook = () => {
         const bookAdderEmail = user.email
 
         const newBook ={ name, image, category, quantity, rating, author, description, bookContent, bookAdderName, bookAdderEmail}
-        console.log(newBook)
+        // console.log(newBook);
 
         fetch('https://11th-assignment-server-delta.vercel.app/books' ,{
             method: "POST",
@@ -46,7 +46,7 @@ const AddBook = () => {
                   });
                   navigate('/')
             }
-            console.log(data)
+            // console.log(data);
         })
 
     }
@@ -54,7 +54,7 @@ const AddBook = () => {
     return (
        <div className='py-20'>
 
-            <div className='bg-[#abc4ff]/40 m-10 border-2 border-[#abc4ff] rounded-2xl   duration-300 font-semibold'>
+            <div className='bg-[#abc4ff]/40 md:m-10 border-2 border-[#abc4ff] rounded-2xl   duration-300 font-semibold'>
 
                 <h2 className='text-center text-xl md:text-2xl xl:text-4xl font-bold my-5 border-b-2 border-[#e3f2fd] w-[50%] mx-auto  '>Add Book Information</h2>
 
@@ -64,13 +64,13 @@ const AddBook = () => {
                         {/* Book Name */}
                         <div>
                             <p>Book Name</p>
-                            <input type="text" name='name' placeholder="Enter Book Name" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='name'  className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                         {/* Book Image */}
                         <div>
                             <p>Book Image link</p>
-                            <input type="text" name='image' placeholder="Enter Book Image Link" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='image'  className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                         {/* Book Category */}
@@ -89,38 +89,38 @@ const AddBook = () => {
                         {/* Author Name */}
                         <div>
                             <p>Author Name</p>
-                            <input type="text" name='author-name' placeholder="Enter Author Name" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='author-name'  className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                         {/* Quantity */}
                         <div>
                             <p>Book Quantity</p>
-                            <input type="number" name='quantity' placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" min={1} required />
+                            <input type="number" name='quantity'  className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" min={1} required />
                         </div>
 
                         {/* Rating */}
                         <div>
                             <p>Book Rating</p>
-                            <input type="number" name='rating' placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" min={1} max={5} required />
+                            <input type="number" name='rating' className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" min={1} max={5} required />
                         </div>
 
                         {/*  Short Description */}
                         <div>
                             <p>Short Description</p>
-                            <input type="text" name='description' placeholder="Enter Short Description" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='description' className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                         {/*  Book Content  */}
                         <div>
                             <p>Book Content </p>
-                            <input type="text" name='book-content' placeholder="Enter Book Content" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                            <input type="text" name='book-content' className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                         </div>
 
                 </div>
 
                 {/* submit */}
                 <div className='my-5 flex justify-center'>
-                    <button  className='btn bg-green-50 btn-outline btn-success w-[50%] hover:scale-x-90 rounded-xl  hover:text-white duration-300 hover:shadow-md'>Submit </button>
+                    <button  className='btn border-none bg-green-400 hover:bg-[#90caf9] hover:border-none scale-95 duration-300 hover:scale-90 sm:text-base text-black hover:text-white shadow-md w-[50%]'>Submit </button>
                 </div>
 
 

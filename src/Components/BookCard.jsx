@@ -9,10 +9,10 @@ const BookCard = ({book}) => {
 
     const {user} = useContext(AuthContext);
 
-    // console.log(book)
+    // console.log(book);
 
     return (
-        <div key={book._id} className=" bg-white/40 drop-shadow-sm border rounded-md px-5 w-64 flex flex-col justify-evenly pb-2">
+        <div key={book._id} className=" border rounded-md px-5 w-64 flex flex-col justify-evenly pb-2 shadow-md hover:shadow-lg">
 
                 <img src={book.image} className="w-[200px] h-[300px] object-cover  shadow-2xl mx-auto pt-3 " />
                 <div className=' flex flex-col  my-3 '>

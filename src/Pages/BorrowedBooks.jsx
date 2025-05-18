@@ -46,8 +46,8 @@ const BorrowedBooks = () => {
     // console.log(user.email)
 
     const handleReturn = (borrowBoookId, bookId) => {
-        console.log(borrowBoookId, bookId)
-        console.log("Book ID:", bookId);
+        // console.log(borrowBoookId, bookId)
+        // console.log("Book ID:", bookId);
 
         Swal.fire({
             title: "Are you sure for Return?",
@@ -89,7 +89,7 @@ const BorrowedBooks = () => {
                         setBorrowedBooks(remainingBook);
                     })
                 })
-                .catch((err) => console.log(err))
+                // .catch((err) => console.log(err))
             }
           })
     }
@@ -98,7 +98,7 @@ const BorrowedBooks = () => {
         <div className='grid lg:grid-cols-2  2xl:grid-cols-3 gap-10 justify-center items-center py-16 '>
             {
                 borrowedBooks.map(borrowedBook => 
-                <div className='flex justify-center items-center  bg-white/40 drop-shadow-sm border rounded-md p-5  sm:w-[500px] lg:scale-90 mx-auto' key={borrowedBook._id}>
+                <div className='flex justify-center items-center   shadow-md hover:shadow-lg border rounded-md p-5  sm:w-[500px] lg:scale-90 mx-auto' key={borrowedBook._id}>
                    <div className='sm:flex justify-between items-center sm:gap-3'>
                         <div className='flex justify-center items-center'>
                             <img className='h-40' src={borrowedBook.bookImage} alt="" />
@@ -110,7 +110,7 @@ const BorrowedBooks = () => {
                             <p>Return Date : {borrowedBook.returnDate}</p>
                         </div>
                         <div className='flex justify-center mt-4'>
-                            <button onClick={() => handleReturn(borrowedBook._id, borrowedBook.bookId )} className='btn border-none bg-green-400 hover:bg-[#90caf9] hover:border-none scale-95 duration-300 hover:scale-90 sm:text-base hover:text-white shadow-md'>Reurn Book</button>
+                            <button onClick={() => handleReturn(borrowedBook._id, borrowedBook.bookId )} className='btn border-none bg-green-400 hover:bg-[#90caf9] hover:border-none scale-95 duration-300 hover:scale-90 sm:text-base text-black hover:text-white shadow-md'>Reurn Book</button>
                         </div>
                    </div>
                 </div>)

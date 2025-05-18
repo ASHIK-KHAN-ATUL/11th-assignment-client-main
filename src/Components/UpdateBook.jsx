@@ -38,7 +38,7 @@ const UpdateBook = () => {
         .then(res => res.json())
         .then(data => {
             if(data.matchedCount){
-                console.log(data)
+                // console.log(data);
                 Swal.fire({
                     title: "Book Updated Successfully Done",
                     icon: "success",
@@ -51,7 +51,7 @@ const UpdateBook = () => {
 
     return (
         <section className='py-20'>
-            <div className='bg-[#abc4ff]/40 m-10 border-2 border-[#abc4ff] rounded-2xl   duration-300 font-semibold px-10'>
+            <div className='bg-[#abc4ff]/40  md:m-10 border-2 border-[#abc4ff] rounded-2xl   duration-300 font-semibold px-10'>
 
             <h2 className='text-center text-xl md:text-2xl xl:text-4xl font-bold my-5 border-b-2 border-[#e3f2fd] w-[50%] mx-auto  '>Update Book Information</h2>
 
@@ -61,13 +61,13 @@ const UpdateBook = () => {
                     {/* Book Name */}
                     <div className='w-full'>
                         <p>Book Name</p>
-                        <input type="text" name='name' defaultValue={book.name} placeholder="Enter Book Name" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='name' defaultValue={book.name} className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
                     {/* Book Image */}
                     <div>
                         <p>Book Image link</p> 
-                        <input type="text" name='image' defaultValue={book.image} placeholder="Enter Book Image Link" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='image' defaultValue={book.image} className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
                     {/* Book Category */}
@@ -86,38 +86,38 @@ const UpdateBook = () => {
                     {/* Author Name */}
                     <div>
                         <p>Author Name</p>
-                        <input type="text" name='author-name' defaultValue={book.author} placeholder="Enter Author Name" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='author-name' defaultValue={book.author}  className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
                     {/* Quantity */}
                     <div>
                         <p>Book Quantity</p>
-                        <input type="number" name='quantity' defaultValue={book.quantity} placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300"  required />
+                        <input type="number" name='quantity' defaultValue={book.quantity} className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300"  required />
                     </div>
 
                     {/* Rating */}
                     <div>
                         <p>Book Rating</p>
-                        <input type="number" name='rating' defaultValue={book.rating} placeholder="Enter Book quantity" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" min={1} max={5} required />
+                        <input type="number" name='rating' defaultValue={book.rating} className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" min={1} max={5} required />
                     </div>
 
                     {/*  Short Description */}
                     <div>
                         <p>Short Description</p>
-                        <input type="text" name='description' defaultValue={book.description} placeholder="Enter Short Description" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='description' defaultValue={book.description} className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
                     {/*  Book Content  */}
                     <div>
                         <p>Book Content </p>
-                        <input type="text" name='book-content' defaultValue={book.bookContent} placeholder="Enter Book Content" className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
+                        <input type="text" name='book-content' defaultValue={book.bookContent} className="input input-bordered w-full  bg-[#abc4ff] hover:bg-[#ffedd8] duration-300" required />
                     </div>
 
             </div>
 
                 {/* submit */}
                 <div className='my-5 flex justify-center'>
-                    <button  className='btn bg-green-50 btn-outline  btn-success w-[55%] hover:scale-x-110 rounded-xl  hover:text-white duration-300 hover:shadow-md'>Submit </button>
+                    <button  className='btn border-none bg-green-400 hover:bg-[#90caf9] hover:border-none scale-95 duration-300 hover:scale-90 sm:text-base text-black hover:text-white shadow-md w-[50%]'>Submit </button>
                 </div>
 
             </form>

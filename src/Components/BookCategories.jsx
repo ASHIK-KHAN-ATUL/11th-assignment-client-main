@@ -12,7 +12,7 @@ const BookCategories = () => {
     ]
 
     const [isHover, setIsHover] = useState(null);
-    console.log(isHover)
+    // console.log(isHover);
 
     return (
        <div className='pt-20 '>

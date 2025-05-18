@@ -38,11 +38,11 @@ const BorrowingTipsFAQ = () => {
       <h2 className="text-2xl font-semibold text-center mb-6">Borrowing Tips & FAQ</h2>
 
 
-      <div className=" mb-8">
+      <div className=" mb-20">
         <h3 className="text-xl font-medium mb-4">Borrowing Tips</h3>
         <ul className="list-disc pl-6 space-y-2">
           {tips.map((tip, index) => (
-            <li key={index} className="text-gray-500 md:text-xl">{tip}</li>
+            <li key={index} className="text-[#6794fc] md:text-xl">{tip}</li>
           ))}
         </ul>
       </div>
@@ -52,7 +52,7 @@ const BorrowingTipsFAQ = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className={`faq-item mb-4 p-4 bg-[#e9edc9] duration-500 border border-[#90e0ef] rounded-lg cursor-pointer ${openFAQ === index ? "" : "bg-red-50"}`}
+            className={`faq-item mb-4 p-4 bg-[#abc4ff] duration-500 border border-[#90e0ef] rounded-lg cursor-pointer ${openFAQ === index ? "" : "bg-transparent"}`}
             onClick={() => toggleFAQ(index)}
           >
             <div className="faq-question">

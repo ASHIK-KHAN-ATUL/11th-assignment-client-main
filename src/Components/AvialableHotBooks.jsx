@@ -14,7 +14,7 @@ import { FreeMode, Pagination, Autoplay  } from 'swiper/modules';
 const AvialableHotBooks = () => {
 
     const [hotBooks, setHotBooks] = useState([]);
-    console.log(hotBooks)
+    // console.log(hotBooks);
 
     useEffect( () =>{
         fetch('https://11th-assignment-server-delta.vercel.app/books/latest')

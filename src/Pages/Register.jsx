@@ -16,7 +16,7 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
         const newUser = {name, photo, email, password};
-        console.log(newUser);
+        // console.log(newUser);
 
         createUser(email, password)
         .then(result => {
@@ -25,7 +25,7 @@ const Register = () => {
         })
         .catch( error => {
             toast.error('Unable To Register')
-            console.log('Error msg', error);
+            // console.log('Error msg', error);
         })
     }
 
@@ -37,7 +37,7 @@ const Register = () => {
         })
         .catch(error => {
             toast.error('Unable To Register')
-            console.log('Error msg', error);
+            // console.log('Error msg', error);
         })
     }
 

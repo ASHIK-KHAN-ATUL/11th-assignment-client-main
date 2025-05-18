@@ -15,14 +15,14 @@ const UseAxios = () => {
         axiosInstance.interceptors.response.use(response => {
             return response;
         } , error=>{
-            console.log('Error caught in interceptor', error);
+            // console.log('Error caught in interceptor', error);
 
             if(error.status === 401 || error.status === 403 ){
-                console.log("Need to logout the user");
+                // console.log("Need to logout the user");
 
                 logout()
                 .then(()=>{
-                    console.log('Logges out user')
+                    // console.log('Logges out user')
                 })
                 .catch( error => ('logged out user', error))
             }

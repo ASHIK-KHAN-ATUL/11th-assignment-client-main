@@ -9,7 +9,7 @@ import useTheme from './Hooks/UseTheme';
 const DetailsBook = () => {
 
     const book = useLoaderData();
-    console.log(book)
+    // console.log(book);
 
     const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ const DetailsBook = () => {
         // }
 
         const borrowBookDetails = {userName, userEmail, returnDate, bookId, bookName, borrowDate, userPic, bookImage, bookCategory};
-        console.log(borrowBookDetails)
+        // console.log(borrowBookDetails);
 
         fetch(`https://11th-assignment-server-delta.vercel.app/borrow/${book._id}`,{
             method:"POST",
@@ -47,7 +47,7 @@ const DetailsBook = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            // console.log(data);
             if(data.insertedId){
                             Swal.fire({
                                 title: "Book Borrowed Successfully Done",

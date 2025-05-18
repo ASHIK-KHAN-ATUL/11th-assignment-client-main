@@ -22,7 +22,7 @@ const Navbar = ({ theme, setTheme }) => {
             </>
 
     return (
-        <div className={`navbar bg-[#abc4ff]  `}>
+        <div className={`navbar bg-[#abc4ff]  sticky top-0 z-50`}>
             <div className="navbar-start">
                 <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost  lg:hidden">
@@ -59,7 +59,7 @@ const Navbar = ({ theme, setTheme }) => {
                         
 
                         {isHover && (
-                            <div className='absolute right-0 top-12 bg-[#e3f2fd] shadow-md rounded-lg w-56 md:w-80 p-3 z-10 drop-shadow-[0_4px_6px_rgba(56,189,248,0.5)]'>
+                            <div className='absolute right-0 top-12 bg-[#abc4ff] border shadow-md rounded-lg w-56 md:w-80 p-3 z-10 drop-shadow-[0_4px_6px_rgba(56,189,248,0.5)]'>
                                 <div className='text-center mb-3'>
                                     <img src={user.photoURL} className='h-16 w-16 mx-auto rounded-full border-2 border-[#023e8a] '  alt="Profile pic " />
                                     <p className='mt-2 text-[10px] md:text-base font-medium text-start'>Name : {user.displayName}</p>

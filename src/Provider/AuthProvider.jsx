@@ -37,19 +37,19 @@ const AuthProvider = ({children}) => {
     useEffect ( () => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
-            console.log("State Captured :", currentUser?.email);
+            // console.log("State Captured :", currentUser?.email);
 
             if(currentUser?.email){
                 const user = { email : currentUser.email}
                 axios.post('https://11th-assignment-server-delta.vercel.app/jwt', user, {withCredentials: true})
                 .then(res => {
-                    console.log("Login Token",res.data);
+                    // console.log("Login Token",res.data);
                     setLoading(false);
                 })
             }else{
                 axios.post('https://11th-assignment-server-delta.vercel.app/logout', {}, {withCredentials: true})
                 .then(res => {
-                    console.log("Logout", res.data);
+                    // console.log("Logout", res.data);
                     setLoading(false);
                 })
             }
