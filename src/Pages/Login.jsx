@@ -46,7 +46,7 @@ const Login = () => {
     return (
         <div className="py-10  ">
             <div className="min-h-screen flex justify-center items-center ">
-                    <div className="card w-full max-w-lg shrink-0 rounded-none p-10 shadow-lg bg-[#e9f5db] bg-opacity-30 border-2 border-[#d8f3dc] shadow-[#d8f3dc]">
+                    <div className="card w-full max-w-lg shrink-0 rounded-none p-10 shadow-lg bg-[#abc4ff]/20  border-2 border-[#abc4ff] shadow-[#abc4ff]">
                         <h2 className="text-2xl font-bold text-center pt-7">Login your account</h2>
                         <form onSubmit={handleSubmit}  className="card-body">
 
@@ -54,14 +54,14 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input name="email" type="email" placeholder="email" className="input input-bordered" required />
+                                <input name="email" type="email"  className="input input-bordered" required />
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input name="password" type="password" placeholder="password" className="input input-bordered" required />
+                                <input name="password" type="password"  className="input input-bordered" required />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>

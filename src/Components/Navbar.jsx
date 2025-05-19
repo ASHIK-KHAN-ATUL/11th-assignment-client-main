@@ -8,6 +8,8 @@ const Navbar = ({ theme, setTheme }) => {
     const {user, logout} = useContext(AuthContext);
     const [isHover, setIsHover] = useState(false);
     const location = useLocation();
+    const [dropdown, setDropdown] = useState(false)
+    console.log(dropdown)
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
@@ -15,22 +17,22 @@ const Navbar = ({ theme, setTheme }) => {
       }, [theme]);
 
     const links = <>
-                <li> <NavLink to="/" >Home</NavLink> </li>
-                <li> <NavLink to="/all-book" >All Books</NavLink> </li>
-                <li> <NavLink to="/add-book" >Add Book</NavLink> </li>
-                <li> <NavLink to="/borrowed-book" >Borrowed Book</NavLink> </li>
+                <li> <NavLink to="/"  onClick={()=>setDropdown(false)}>Home</NavLink> </li>
+                <li> <NavLink to="/all-book" onClick={()=>setDropdown(false)}>All Books</NavLink> </li>
+                <li> <NavLink to="/add-book" onClick={()=>setDropdown(false)} >Add Book</NavLink> </li>
+                <li> <NavLink to="/borrowed-book" onClick={()=>setDropdown(false)} >Borrowed Book</NavLink> </li>
             </>
 
     return (
         <div className={`navbar bg-[#abc4ff]  sticky top-0 z-50`}>
             <div className="navbar-start">
                 <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost  lg:hidden">
+                        <div onClick={()=>setDropdown(!dropdown)} role="button" className="btn btn-ghost  lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"  d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content  bg-[#abc4ff] drop-shadow-[0_4px_6px_rgba(56,189,248,0.5)] rounded-box z-[1] mt-3 w-52 p-2 shadow-xl" >{links}</ul>
+                        <ul className={` ${dropdown ? '' : 'hidden'} menu menu-sm absolute lg:hidden bg-[#abc4ff] border rounded-box z-[1]  w-52 p-2 shadow-xl`} >{links}</ul>
                 </div>
                 <p className=" font-bold text-base md:text-xl md:font-extrabold xl:text-3xl ">LibroHub</p>
             </div>
@@ -43,9 +45,9 @@ const Navbar = ({ theme, setTheme }) => {
 
                     <button
                         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-                        className="btn btn-sm btn-outline btn-success"
+                        className="btn btn-sm btn-outline border-none hover:bg-transparent text-xl "
                         >
-                        {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+                        {theme === "light" ? "🌙  " : "☀️ "}
                     </button>
                 {
                     user ? 
@@ -76,9 +78,9 @@ const Navbar = ({ theme, setTheme }) => {
                 <div className='flex gap-4 items-center'>
 
                     {location.pathname === '/login' ? 
-                    (<NavLink to={'/register'} className='btn border-none hover:border-none bg-[#6cddf1] hover:bg-[#74c69d] transition-all duration-300 ease-in-out transform hover:scale-105 font-semibold hover:text-white'>Register</NavLink>) 
+                    (<NavLink to={'/register'} className='btn btn-outline rounded-none btn-sm hover:bg-black text-black hover:text-white duration-500 '>Register</NavLink>) 
                     :
-                    (<NavLink to={'/login'} className='btn border-none hover:border-none bg-[#74c69d] hover:bg-[#6cddf1] transition-all duration-300 ease-in-out transform hover:scale-105 font-semibold hover:text-white'>Login</NavLink>)}
+                    (<NavLink to={'/login'} className='btn btn-outline rounded-none btn-sm hover:bg-black text-black hover:text-white duration-500 '>Login</NavLink>)}
 
                 </div>
                 }

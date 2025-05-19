@@ -39,7 +39,7 @@ const BorrowingTipsFAQ = () => {
 
 
       <div className=" mb-20">
-        <h3 className="text-xl font-medium mb-4">Borrowing Tips</h3>
+        <h3 className="text-2xl font-medium mb-8 border-l-4 border-[#6794fc] px-5">Borrowing Tips</h3>
         <ul className="list-disc pl-6 space-y-2">
           {tips.map((tip, index) => (
             <li key={index} className="text-[#6794fc] md:text-xl">{tip}</li>
@@ -48,17 +48,17 @@ const BorrowingTipsFAQ = () => {
       </div>
 
       <div className="">
-        <h3 className="text-xl font-medium mb-4">Frequently Asked Questions</h3>
+        <h3 className="text-2xl font-medium mb-8 border-l-4 border-[#6794fc] px-5">Frequently Asked Questions</h3>
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className={`faq-item mb-4 p-4 bg-[#abc4ff] duration-500 border border-[#90e0ef] rounded-lg cursor-pointer ${openFAQ === index ? "" : "bg-transparent"}`}
+            className={`faq-item mb-4 p-4  duration-500 border border-[#90e0ef] rounded-lg cursor-pointer ${openFAQ === index ? "" : "bg-transparent"}`}
             onClick={() => toggleFAQ(index)}
           >
             <div className="faq-question">
-              <h4 className="text-lg font-semibold text-black">{faq.question}</h4>
+              <h4 className="text-lg font-semibold ">{faq.question}</h4>
             </div>
-            {openFAQ === index && <p className="faq-answer text-black mt-2">{faq.answer}</p>}
+            {openFAQ === index && <p className="faq-answer  mt-2">{faq.answer}</p>}
           </div>
         ))}
       </div>
