@@ -15,9 +15,13 @@ const BookCategories = () => {
     // console.log(isHover);
 
     return (
-       <div className='pt-20 '>
-            <div className=' p-4 w-[90%] lg:w-[75%] mx-auto '>
-                <h1 className='py-5 font-bold md:text-2xl text-center mb-10'>Book By Category !!</h1>
+       <div className='w-[90%] md:w-[80%] mx-auto'>
+            <div className=''>
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-[#6794fc]">
+                Book By <span className="text-purple-600">Category</span>?
+            </h2>
+
                 <div className=' grid grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 '>
                     {categories.map( (category, idx)=> (
                         <div key={idx} className='w-full  flex justify-center'>

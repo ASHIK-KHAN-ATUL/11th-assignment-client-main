@@ -34,9 +34,11 @@ const BorrowingTipsFAQ = () => {
   ];
 
   return (
-    <div className="pt-20 w-[90%] rounded-lg md:max-w-3xl mx-auto ">
-      <h2 className="text-2xl font-semibold text-center mb-6">Borrowing Tips & FAQ</h2>
+    <div className="pt-20 w-[90%] md:w-[80%] rounded-lg mx-auto ">
 
+      <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-[#6794fc]">
+            Borrowing Tips & <span className="text-purple-600">FAQ</span>?
+      </h2>
 
       <div className=" mb-20">
         <h3 className="text-2xl font-medium mb-8 border-l-4 border-[#6794fc] px-5">Borrowing Tips</h3>

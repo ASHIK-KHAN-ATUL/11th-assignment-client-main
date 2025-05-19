@@ -26,8 +26,10 @@ const AvialableHotBooks = () => {
 
 
     return (
-        <div className=" pt-20  ">
-            <h2 className='font-semibold  md:font-bold text-xl md:text-3xl py-10 text-center'>Hot Books</h2>
+        <div className="">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#6794fc]  text-center mb-10 ">
+                    Available Hot <span className="text-purple-600">Books</span>
+                </h2>
 
              <Swiper
                 spaceBetween={20}
@@ -49,12 +51,12 @@ const AvialableHotBooks = () => {
                 },
                 }}
                 modules={[FreeMode, Pagination, Autoplay]}
-                className="mySwiper"
+                className="h-72 w-48 md:w-auto"
                         >
                     {
                         hotBooks.map((book, index) => 
-                        <SwiperSlide key={index}>
-                            <img src={book.image} className='h-60 cursor-pointer' alt="" />
+                        <SwiperSlide className='h-full w-full' key={index}>
+                            <img src={book.image} className=' h-64 object-cover cursor-pointer' alt="" />
                         </SwiperSlide>)
                     }
             </Swiper>

@@ -2,9 +2,9 @@ import React from 'react';
 
 const WhyChoseUs = () => {
     return (
-        <section className="bg-gradient-to-r  py-12 px-4 md:px-10 mt-20">
+        <section className="w-[90%] md:w-[80%] mx-auto ">
             <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold  mb-6">Why Choose <span className="text-purple-600">LibroHub</span>?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#6794fc]">Why Choose <span className="text-purple-600">LibroHub</span>?</h2>
                 <p className=" mb-10 max-w-2xl mx-auto">
                 Explore a smarter way to borrow, read, and connect with fellow book lovers. LibroHub brings your favorite titles closer than ever before.
                 </p>
