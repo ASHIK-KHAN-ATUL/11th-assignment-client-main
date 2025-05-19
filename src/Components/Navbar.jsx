@@ -24,15 +24,19 @@ const Navbar = ({ theme, setTheme }) => {
             </>
 
     return (
-        <div className={`navbar bg-[#abc4ff]  sticky top-0 z-50`}>
+        <div  className={`navbar bg-[#abc4ff]  sticky top-0 z-50`}>
             <div className="navbar-start">
                 <div className="dropdown">
-                        <div onClick={()=>setDropdown(!dropdown)} role="button" className="btn btn-ghost  lg:hidden">
+                        <div onClick={()=>setDropdown(!dropdown)}  role="button" className="btn btn-ghost lg:hidden relative">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"  d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>
                         </div>
-                        <ul className={` ${dropdown ? '' : 'hidden'} menu menu-sm absolute lg:hidden bg-[#abc4ff] border rounded-box z-[1]  w-52 p-2 shadow-xl`} >{links}</ul>
+                        <ul  className={` ${dropdown ? '' : 'hidden'} menu menu-sm absolute lg:hidden bg-[#abc4ff] border rounded-box z-[1]  w-52 p-2 pt-10 shadow-xl  top-10 `} onMouseLeave={() => setDropdown(false)} >{links}
+                            <span onClick={()=>setDropdown(!dropdown)} className='absolute text-2xl border rounded-full h-7 w-7 bg-red-500 flex justify-center items-center top-1 right-1 hover:cursor-pointer'>
+                                <p className='pb-2 text-white'>x</p>
+                            </span>
+                        </ul>
                 </div>
                 <p className=" font-bold text-base md:text-xl md:font-extrabold xl:text-3xl ">LibroHub</p>
             </div>

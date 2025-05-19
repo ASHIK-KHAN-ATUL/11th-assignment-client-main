@@ -15,7 +15,7 @@ const AllBookTable = () => {
           <table className="table border-2 border-black">
             {/* head */}
             <thead >
-              <tr className="bg-[#e9edc9] ">
+              <tr className="bg-[#819ae0] text-white ">
                 <th>Image</th>
                 <th>Book Name & Category</th>
                 <th>Quantity & Rating</th>
@@ -50,7 +50,7 @@ const AllBookTable = () => {
 
                   <td className="font-bold ">
                     <span>{book.quantity}</span>
-                    <span className=" bg-blue-100 px-3 py-1 rounded-2xl font-normal ">Rating:{book.rating} </span>
+                    <span className=" bg-blue-200 px-3 py-1 rounded-2xl font-normal ">Rating:{book.rating} </span>
                   </td>
 
                   <td>{book.author}</td>
