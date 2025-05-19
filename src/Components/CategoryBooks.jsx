@@ -49,7 +49,7 @@ const CategoryBooks = () => {
             {
                 books.map((book, idx) => 
 
-                <div key={idx} className="  bg-white/40 drop-shadow-sm border rounded-md px-5 w-64 pb-2 flex flex-col  justify-evenly">
+                <div key={idx} className=" drop-shadow-sm border rounded-md px-5 w-64 pb-2 flex flex-col  justify-evenly">
 
                         <img src={book.image} className="w-[200px] h-[300px] object-cover  shadow-2xl mx-auto pt-3  " />
 

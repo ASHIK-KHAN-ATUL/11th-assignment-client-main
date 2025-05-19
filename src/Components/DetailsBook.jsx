@@ -61,22 +61,27 @@ const DetailsBook = () => {
     }
 
     return (
-        <section className='px-10 py-20'>
-            <div className="hero  bg-white/30 drop-shadow-sm border rounded-xl">
-                <div className="hero-content flex-col lg:flex-row">
-                    <img src={book.image} className="sm:max-w-sm rounded-lg shadow-2xl" />
-                    <div className='flex flex-col gap-5 font-semibold'>
-                    <h1 className="text-3xl font-bold">Book Name : {book.name}</h1>
-                    <p className="text-sm sm:text-2x">Author Name : {book.author}</p>
-                    <p className="text-sm sm:text-2x">Book Category : {book.category}</p>
-                    <p className="text-sm sm:text-2x">Book Description : {book.description}</p>
-                    <p className="text-sm sm:text-2x">Book Content : {book.bookContent}</p>
-                    <p className="text-sm sm:text-2x">Book Quantity : {book.quantity}</p>
-                    <p className="flex  items-center text-sm sm:text-2xl">Rating :  <ReactStars count={5} value={book.rating} size={25}></ReactStars> </p>  
-                    <button onClick={()=>document.getElementById('my_modal_5').showModal()} className="btn btn-outline btn-success w-[50%] mx-auto  py-3 px-5  hover:scale-95 rounded-xl  hover:text-white duration-300 hover:shadow-md hover:shadow-lime-50 text-base" disabled={book.quantity == 0}>{book.quantity > 0 ? 'Borrow Book' : 'Out Of Stock'}</button>
+        <section className=' py-20'>
+
+                <div className="hero-content border rounded-lg  flex flex-col lg:flex-row gap-10 justify-around mx-auto max-w-4xl"> 
+
+                    <div className='lg:w-[40%]'>
+                        <img src={book.image} className=" max-w-72  rounded-lg shadow-2xl" />
                     </div>
+
+                    <div className='flex flex-col gap-5 font-semibold lg:w-[40%]'>
+                        <h1 className="text-xl font-bold">Book Name : {book.name}</h1>
+                        <p className="">Author Name : {book.author}</p>
+                        <p className="">Book Category : {book.category}</p>
+                        <p className="">Book Description : {book.description}</p>
+                        <p className="">Book Content : {book.bookContent}</p>
+                        <p className="">Book Quantity : {book.quantity}</p>
+                        <p className="flex  items-center ">Rating :  <ReactStars count={5} value={book.rating} size={25}></ReactStars> </p>  
+                        <button onClick={()=>document.getElementById('my_modal_5').showModal()} className="btn btn-outline btn-success w-[50%] mx-auto  py-3 px-5  hover:scale-95 rounded-xl  hover:text-white duration-300 hover:shadow-md  text-base" disabled={book.quantity == 0}>{book.quantity > 0 ? 'Borrow Book' : 'Out Of Stock'}</button>
+                    </div>
+                    
                 </div>
-            </div>
+
 
 
             {/* Modal  */}
