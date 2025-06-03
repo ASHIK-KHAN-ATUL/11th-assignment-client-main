@@ -9,7 +9,7 @@ const Navbar = ({ theme, setTheme }) => {
     const [isHover, setIsHover] = useState(false);
     const location = useLocation();
     const [dropdown, setDropdown] = useState(false)
-    console.log(dropdown)
+    // console.log(dropdown)
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
